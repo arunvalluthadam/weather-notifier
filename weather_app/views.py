@@ -30,7 +30,7 @@ def home(request):
 			# -------------------------------------------- send email ------------------
 			subject = "Thank you For Supporting me!!!"
 			message = "You will get peroidic weather information soon..."
-			from_email = settings.EMAIL_HOST_USER
+			from_email = 'simplans@noreplay.com' #settings.EMAIL_HOST_USER
 			to_list = [save_it.email]
 			send_mail(subject, message, from_email, to_list, fail_silently=False)
 			# -------------------------------------------- end send email ------------------
