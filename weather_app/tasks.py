@@ -39,7 +39,7 @@ def get_weather(each_location):
 
 
 # @app.task
-@periodic_task(run_every=datetime.timedelta(hours=24))
+@periodic_task(run_every=datetime.timedelta(seconds=5))
 def send_welcome_mail():
 	# get email and location from database
 	weather_notification = WeatherNotifications.objects.all()
